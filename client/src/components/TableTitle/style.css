@@ -1,0 +1,10 @@
+.TableTitle{
+	display: flex;
+	height: 50px;
+	font-size: 30px;
+}
+.TableTitle span{
+	text-align: center;
+	border: 1px solid black;
+	width: 25%
+}

@@ -1,0 +1,21 @@
+.Row{
+	display: flex;
+	width: 100%;
+}
+.Row>div{
+	display: flex;	
+	justify-content: 	space-between;
+	align-items: 	center;		 
+	border: 1px solid black;
+	width: 20%;
+	overflow: hidden;	
+}
+.Row>div>button{
+	border: none;	
+	background-color: #eee;
+	padding: 0;
+	margin-left: 5px;
+}
+.Row>div>button>img{
+	height: 15px;
+}
