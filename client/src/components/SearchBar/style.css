@@ -1,0 +1,7 @@
+.SearchBar{
+	display:flex;
+	justify-content:flex-start; 
+}
+.SearchBar>input{
+	margin-right: 10px;
+}

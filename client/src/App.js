@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import './style.css'
 import Row from './components/Row'
+import SearchBar from './components/SearchBar'
 import TableTitle from './components/TableTitle'
 
 class App extends Component {
@@ -13,11 +14,15 @@ class App extends Component {
       input: '',
       filteredList: []
     };
-    this.getData();
+    // this.getData();
   }
 
-  getData = () => {
-    axios.get('http://localhost:8080/')
+  getData = (data) => {
+    axios.get('http://localhost:8080/', {
+    params: {
+      ...data
+    }
+  }) 
     .then(res => {
       const data = res.data.data;
       this.setState({ 
@@ -66,6 +71,7 @@ class App extends Component {
     const listOfItem = input ? filteredList	: data;
   	return (
       <div className='App'>
+        <SearchBar getData={this.getData}/>
       	<div className='Search'>
       		<input value={input} onChange={this.onHandleChange} placeholder='Search'/>
       	</div>
