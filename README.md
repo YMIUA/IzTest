@@ -2,8 +2,8 @@ To start a server you will need:
 
 npm install
 
-cd client
+cd client &&
 npm install
 
-cd ..
+cd .. &&
 npm run dev
